@@ -1,10 +1,10 @@
 import ContactsListItem from "components/ContactsListItem/ContactsListItem";
 
-const ContactsList = ({contacts}) => {
+const ContactsList = ({contacts, onDelete}) => {
   return (
     <div>
       <h2>Contacts</h2>
-      <ContactsListItem contacts={{ contacts }}/>
+      <ContactsListItem contacts={contacts} onDelete={onDelete} />
     </div>
   )
 }

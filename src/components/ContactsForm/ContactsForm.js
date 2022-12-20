@@ -1,17 +1,14 @@
 import React from "react";
 import { nanoid } from "nanoid";
-import ContactsList from "components/ContactsList/ContactsList";
 
 class ContactsForm extends React.Component {
   state = {
-    contacts: [],
     name: '',
-    number: ''
+    number: '',
   }
 
   nameInputId = nanoid();
   numberInputId = nanoid();
-  contactId = nanoid();
 
   handleChanges = event => {
 
@@ -20,11 +17,7 @@ class ContactsForm extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.setState(prevState => {
-      return { contacts: [...prevState.contacts, { "id": this.contactId, "name": this.state.name, number: this.state.number}]}
-    })
-    this.props.onSubmit(this.state.contacts)
-    console.log(this.state.contacts)
+    this.props.onSubmit({ name:this.state.name, number:this.state.number })
     this.reset()
   }
 
