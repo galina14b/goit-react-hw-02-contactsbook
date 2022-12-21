@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import ContactsListItem from "components/ContactsListItem/ContactsListItem";
 
 const ContactsList = ({contacts, onDelete}) => {
@@ -10,3 +11,8 @@ const ContactsList = ({contacts, onDelete}) => {
 }
 
 export default ContactsList;
+
+ContactsList.prototypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object),
+  onDelete: PropTypes.func
+}
