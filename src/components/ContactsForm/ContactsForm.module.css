@@ -1,0 +1,30 @@
+.block {
+  width: 500px;
+  border: solid 1px black;
+  /* margin: 0 auto; */
+  padding: 30px;
+}
+
+.block form {
+  display: flex;
+  flex-direction: column;
+}
+
+.block label {
+  display: flex;
+  flex-direction: column;
+}
+
+.block input {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.block button {
+  width: 100px;
+  margin-top: 20px;
+  background-color: transparent;
+  height: 20px;
+  border: solid 1px darkgray;
+  border-radius: 5px;
+}

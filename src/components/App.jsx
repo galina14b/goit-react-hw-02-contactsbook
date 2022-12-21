@@ -1,4 +1,5 @@
 import React from "react";
+import css from "./App.module.css"
 import ContactsForm from "./ContactsForm/ContactsForm";
 import ContactsList from "./ContactsList/ContactsList";
 import { nanoid } from "nanoid";
@@ -51,15 +52,7 @@ class App extends React.Component {
   
   render() {
     return (
-      <div
-        style={{
-          height: '100vh',
-          justifyContent: 'center',
-          alignItems: 'center',
-          fontSize: 40,
-          color: '#010101'
-        }}
-      >
+      <div className={css.block}>
         <h2>Phonebook</h2>
         <ContactsForm onSubmit={this.handleData} />
         { this.filtration(this.state.filter.toLowerCase())}
